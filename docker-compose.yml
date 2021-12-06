@@ -2,11 +2,11 @@ version: '3.1'
 
 services:
   springboot:
-    image: dockerhandson/spring-boot-mongo:latest
+    image: devopswithdhana/spring-boot-mongo:latest
     restart: always # This will be ignored if we deploy in docker swarm
     container_name: springboot
     ports:
-      - 9090:8080
+      - 5000:8080
     working_dir: /opt/app
     depends_on:
       - mongo
